@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package scrumbler_v1;
+
+option go_package = "github.com/monsavile/rubik-scrumbler/pkg/scrumbler_v1;scrumbler_v1";
+
+service ScrumblerV1 {
+  rpc Scrumble(ScrumbleRequest) returns (ScrumbleResponse);
+}
+
+message ScrumbleRequest {
+  string cube = 1;
+}
+
+message ScrumbleResponse {
+  string cube = 1;
+}
